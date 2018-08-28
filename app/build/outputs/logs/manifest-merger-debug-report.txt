@@ -75,12 +75,12 @@ MERGED from [com.android.support:versionedparcelable:28.0.0-rc01] E:\AndroidStud
 		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:11:9-40
-activity#me.mrzhang.music.activity.MainActivity
+activity#me.mrzhang.music.activity.MusicActivity
 ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:label
 		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:14:13-45
 	android:name
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:13:13-50
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:13:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN

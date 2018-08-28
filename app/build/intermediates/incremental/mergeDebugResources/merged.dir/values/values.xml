@@ -142,6 +142,7 @@
     <attr format="reference" name="materialButtonStyle"/>
     <attr format="reference" name="materialCardViewStyle"/>
     <attr format="reference" name="navigationViewStyle"/>
+    <attr format="reference" name="playBarBackground"/>
     <attr format="color" name="rippleColor"/>
     <attr format="color|reference" name="scrimBackground"/>
     <attr format="reference" name="showMotionSpec"/>
@@ -836,6 +837,7 @@
     <dimen name="design_textinput_caption_translate_y">5dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="divider_height">0.5dp</dimen>
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
@@ -912,6 +914,9 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="play_bar_height">57dp</dimen>
+    <dimen name="screen_tips_top">80dp</dimen>
+    <dimen name="text_size_common">16sp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1012,25 +1017,96 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">SuperMusic</string>
+    <string name="about_github">https://github.com/wangchenyan</string>
+    <string name="about_jianshu">http://www.jianshu.com/users/3231579893ac</string>
+    <string name="about_project_url">https://github.com/wangchenyan/PonyMusic</string>
+    <string name="about_weibo">http://weibo.com/wangchenyan1993</string>
+    <string name="activity_playlist">播放列表</string>
+    <string name="app_name">超级音乐</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="artist_info">歌手信息</string>
+    <string name="artist_info_birth">生日：%s</string>
+    <string name="artist_info_constellation">星座：%s</string>
+    <string name="artist_info_country">国籍：%s</string>
+    <string name="artist_info_empty">暂无歌手信息</string>
+    <string name="artist_info_intro">简介：%s</string>
+    <string name="artist_info_name">姓名：%s</string>
+    <string name="artist_info_stature">身高：%scm</string>
+    <string name="artist_info_weight">体重：%skg</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="cancel">取消</string>
     <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="copyright">Copyright © 2015-%d SWUST</string>
+    <string name="delete">删除</string>
+    <string name="delete_music">删除%s？</string>
+    <string name="device_not_support">您的设备不支持此功能</string>
+    <string name="download_success">%s下载完成</string>
+    <string name="download_tips">当前处于移动网络，下载将消耗较多流量，是否继续下载？</string>
+    <string name="download_tips_sure">继续下载</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">android.support.design.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">android.support.design.transformation.FabTransformationSheetBehavior</string>
+    <string name="grant_permission_setting">授权成功，请在再次操作以设置铃声</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="load_fail">加载失败，请检查网络后重试</string>
+    <string name="loading">努力加载中…</string>
+    <string name="local_music">本地音乐</string>
+    <string name="menu_about">关于波尼音乐</string>
+    <string name="menu_exit">退出应用</string>
+    <string name="menu_night">夜间模式</string>
+    <string name="menu_setting">功能设置</string>
+    <string name="menu_share">推荐给朋友</string>
+    <string name="menu_timer">定时停止播放</string>
+    <string name="mobile_network_download">使用移动网络下载</string>
+    <string name="mobile_network_play">使用移动网络播放</string>
+    <string name="mode_loop">列表循环</string>
+    <string name="mode_one">单曲循环</string>
+    <string name="mode_shuffle">随机播放</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="music_info">歌曲信息</string>
+    <string name="network">网络</string>
+    <string name="no_local_music">暂无本地音乐</string>
+    <string name="no_permission_location">没有位置信息权限，无法更新天气！</string>
+    <string name="no_permission_select_image">没有权限，无法选择图片！</string>
+    <string name="no_permission_setting">没有权限，无法设置铃声，请授予权限</string>
+    <string name="no_permission_storage">没有存储空间权限，无法扫描本地歌曲！</string>
+    <string name="now_download">正在下载：%s</string>
+    <string name="now_play">正在播放：%s</string>
+    <string name="online_music">在线音乐</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="play">播放</string>
+    <string name="play_time_start">00:00</string>
+    <string name="play_tips">当前处于移动网络，确定打开移动网络播放开关吗？</string>
+    <string name="play_tips_sure">立即打开</string>
+    <string name="recent_update">最近更新：%s</string>
+    <string name="save">保存</string>
+    <string name="search">搜索</string>
+    <string name="search_empty">未找到相关结果</string>
     <string name="search_menu_title">Search</string>
+    <string name="search_tips">歌曲名、歌手名</string>
+    <string name="setting_ringtone_success">设置铃声成功</string>
+    <string name="share">分享</string>
+    <string name="share_app">青春，狂热，放纵，自由，当我们带上耳机以后做回自己，这是音乐的魅力。%s：http://fir.im/ponymusic</string>
+    <string name="share_music">我用%1$s分享了歌曲《%2$s》%3$s</string>
+    <string name="song_list_item_title_1">1.%1$s - %2$s</string>
+    <string name="song_list_item_title_2">2.%1$s - %2$s</string>
+    <string name="song_list_item_title_3">3.%1$s - %2$s</string>
+    <string name="sound_effect">音效调节</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_home">Home</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="sure">确定</string>
+    <string name="timer_cancel">定时停止播放已取消</string>
+    <string name="timer_set">设置成功，将于%s分钟后关闭</string>
+    <string name="tips">温馨提示</string>
+    <string name="unable_to_download">暂时无法下载</string>
+    <string name="unable_to_play">暂时无法播放</string>
+    <string name="unable_to_share">暂时无法分享</string>
+    <string name="unknown">未知</string>
+    <string name="weather_temp">%s°</string>
+    <string name="weather_wind">%1$s风%2$s级  湿度%3$s%%</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1040,11 +1116,26 @@
     <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
   </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryDark">@color/red</item>
         <item name="colorAccent">@color/red</item>
+    </style>
+    <style name="AppBaseThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/grey_900</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+        <item name="colorAccent">@color/grey_900</item>
+        <item name="playBarBackground">@drawable/play_bar_bg_selector_dark</item>
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme"/>
+    <style name="AppTheme.Search" parent="AppBaseTheme">
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="AppTheme.Text" parent="TextAppearance.AppCompat"/>
+    <style name="AppThemeDark" parent="AppBaseThemeDark"/>
+    <style name="AppThemeDark.Search" parent="AppBaseThemeDark">
+        <item name="colorAccent">@color/white</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
