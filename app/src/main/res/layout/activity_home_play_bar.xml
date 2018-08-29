@@ -10,7 +10,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/image_play_bar_cover"
@@ -26,10 +26,63 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            >
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_music_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.Text"
+                android:text="@string/no_music"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_common"
+                android:textColor="@color/grey_900_96p"/>
+
+            <TextView
+                android:id="@+id/text_music_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp"/>
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/image_play_bar_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/play_bar_btn_play_pause_selector"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/image_play_bar_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_home_next"/>
+
+        <ImageView
+            android:id="@+id/image_play_bar_music_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_home_music_list"/>
+
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_play_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_gravity="bottom"
+        android:progressDrawable="@drawable/progress_bar_style"/>
 
 </FrameLayout>
