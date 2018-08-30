@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
 MERGED from [com.android.support:design:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\design-27.1.1.aar\bdb63aa816a2af522ecdaa34b3d2b800\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\8db854bed1113f95be2b0b46c272d48f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\65ab5ef43f613209ce952ee452430e07\AndroidManifest.xml:17:1-22:12
@@ -21,55 +21,57 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] E:\AndroidStudioGradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\dad5132c7cde680bccc23f4a60fbeade\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1aa9f1cfa3db616bf37db57bdd9f4471\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b9e8f2f34a8fab597afb0dfb84e46f91\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
 	package
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:3:5-31
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:5:5-31
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:4:5-51
 	android:versionCode
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:3:5-63
 application
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:7:5-23:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\28ae17c86733ee48d3e849059a10c271\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\28ae17c86733ee48d3e849059a10c271\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:8:9-41
-	android:roundIcon
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:10:9-41
 	android:icon
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:9:9-45
 	android:allowBackup
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:12:9-40
+	tools:replace
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:13:9-41
 activity#me.mrzhang.music.activity.MusicActivity
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:12:9-20:20
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:14:9-22:20
 	android:label
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:14:13-45
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:16:13-45
 	android:name
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:13:13-51
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:15:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\AndroidProject\SuperMusic\app\src\main\AndroidManifest.xml
