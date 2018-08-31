@@ -11,7 +11,7 @@ public class ViewBinder {
         bind(activity, activity.getWindow().getDecorView());
     }
 
-    private static void bind(Object target, View source){
+    public static void bind(Object target, View source){
         Field[] fields = target.getClass().getDeclaredFields();
         if (fields != null && fields.length > 0) {
             for (Field field : fields) {

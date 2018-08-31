@@ -1,10 +1,13 @@
 package me.mrzhang.music.activity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,14 +26,14 @@ import me.mrzhang.music.utils.binding.ViewBinder;
  */
 public abstract class BaseActivity extends AppCompatActivity{
 
-    private Handler handler;
+    protected Handler handler;
     private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setSystemBarTransparent();
-        handler = new Handler();
+        handler = new Handler(Looper.getMainLooper());
     }
 
     @Override
@@ -56,10 +59,11 @@ public abstract class BaseActivity extends AppCompatActivity{
         Toolbar mToolbar = findViewById(R.id.toolbar);
         if (mToolbar == null) {
             throw new IllegalStateException("Layout is required to include a Toolbar with id 'toolbar'");
-        }
-        setSupportActionBar(mToolbar);
-        if (getSupportActionBar() != null) {
+        } else {
+            setSupportActionBar(mToolbar);
+            if (getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
         }
     }
 
@@ -112,6 +116,12 @@ public abstract class BaseActivity extends AppCompatActivity{
             // KITKAT解决方案
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+    }
+
+    // 界面跳转方法
+    protected void intentActivity(Activity activity, Class<?> clazz){
+        Intent intent = new Intent(activity, clazz);
+        startActivity(intent);
     }
 
     // 权限申请

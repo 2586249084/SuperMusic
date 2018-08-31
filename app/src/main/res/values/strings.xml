@@ -75,4 +75,6 @@
     <string name="no_permission_select_image">没有权限，无法选择图片！</string>
     <string name="activity_playlist">播放列表</string>
     <string name="no_music">无音乐</string>
+    <string name="user_name">用户名</string>
+    <string name="no_function">暂不支持该功能</string>
 </resources>

@@ -3,8 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimaryDark"
+    android:fitsSystemWindows="true"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    <LinearLayout
+        android:id="@+id/ll_weather"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_horizontal_margin">
 
+        <ImageView
+            android:id="@+id/image_user_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -9,6 +9,7 @@ MERGED from [com.android.support:appcompat-v7:27.1.1] E:\AndroidStudioGradle\cac
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\65ab5ef43f613209ce952ee452430e07\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\eef1e8d747bd1cede09cffe3dfa8c693\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\28ae17c86733ee48d3e849059a10c271\AndroidManifest.xml:2:1-11:12
+MERGED from [com.zhy:okhttputils:2.6.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\okhttputils-2.6.2.aar\ac5d678f214503e854a24646441fca17\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\58609ecbc56d4529b15684704b15c0f8\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\deda3424c8b592618c921a0bd2473a5f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\412f16aa2f3013d8c889e01929a0e628\AndroidManifest.xml:17:1-22:12
@@ -86,6 +87,8 @@ MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\AndroidStudi
 MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\eef1e8d747bd1cede09cffe3dfa8c693\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\28ae17c86733ee48d3e849059a10c271\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\28ae17c86733ee48d3e849059a10c271\AndroidManifest.xml:5:5-7:41
+MERGED from [com.zhy:okhttputils:2.6.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\okhttputils-2.6.2.aar\ac5d678f214503e854a24646441fca17\AndroidManifest.xml:7:5-9:41
+MERGED from [com.zhy:okhttputils:2.6.2] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\okhttputils-2.6.2.aar\ac5d678f214503e854a24646441fca17\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\58609ecbc56d4529b15684704b15c0f8\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\58609ecbc56d4529b15684704b15c0f8\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] E:\AndroidStudioGradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\deda3424c8b592618c921a0bd2473a5f\AndroidManifest.xml:20:5-44
