@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Exclude specific shared preferences that contain GCM registration Id -->
+    <!-- 排除包含GCM注册Id的特定共享首选项 -->
+
+</full-backup-content>

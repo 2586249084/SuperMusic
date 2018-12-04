@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils.binding;
+package com.utils.binding;
 
 import android.app.Activity;
 import android.util.Log;
@@ -28,7 +28,6 @@ public class ViewBinder {
                     }
                 } catch (Exception error) {
                     Log.e("Binding Error:", error.getLocalizedMessage());
-                    error.printStackTrace();
                 }
             }
         }

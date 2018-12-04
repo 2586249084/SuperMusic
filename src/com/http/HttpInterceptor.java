@@ -1,4 +1,4 @@
-package me.mrzhang.music.http;
+package com.http;
 
 import android.os.Build;
 import java.io.IOException;

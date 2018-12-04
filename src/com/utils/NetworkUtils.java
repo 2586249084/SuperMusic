@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils;
+package com.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

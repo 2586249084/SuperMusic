@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils.binding;
+package com.utils.binding;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

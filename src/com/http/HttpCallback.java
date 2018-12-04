@@ -1,4 +1,4 @@
-package me.mrzhang.music.http;
+package com.http;
 
 public abstract class HttpCallback<T> {
     public abstract void onSuccess(T t);

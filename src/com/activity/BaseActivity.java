@@ -1,39 +1,75 @@
-package me.mrzhang.music.activity;
+package com.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+
 import me.mrzhang.music.R;
-import me.mrzhang.music.utils.PermissionReq;
-import me.mrzhang.music.utils.binding.ViewBinder;
+
+import com.service.PlayService;
+import com.utils.PermissionReq;
+import com.utils.binding.ViewBinder;
 
 /**
  * 基类<br>
  * 如果继承本类，需要在 layout 中添加 {@link Toolbar} ，并将 AppTheme 继承 Theme.AppCompat.NoActionBar
  */
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected Handler handler;
     private ProgressDialog progressDialog;
+    protected PlayService playService;
+    private ServiceConnection serviceConnection;
+
+    private class PlayServiceConnection implements ServiceConnection {
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            playService = ((PlayService.PlayBinder) service).getService();
+            onServiceBound();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.e(getClass().getSimpleName(), "service disconnected");
+        }
+
+    }
+
+    protected void onServiceBound() {
+    }
+
+    private void bindService() {
+        Intent intent = new Intent();
+        intent.setClass(this, PlayService.class);
+        serviceConnection = new PlayServiceConnection();
+        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setSystemBarTransparent();
         handler = new Handler(Looper.getMainLooper());
+        bindService();
     }
 
     @Override
@@ -54,7 +90,7 @@ public abstract class BaseActivity extends AppCompatActivity{
         initView();
     }
 
-    private void initView(){
+    private void initView() {
         ViewBinder.bind(this);
         Toolbar mToolbar = findViewById(R.id.toolbar);
         if (mToolbar == null) {
@@ -79,11 +115,11 @@ public abstract class BaseActivity extends AppCompatActivity{
     /**
      * 正在加载时所显示的progressDialog
      */
-    public void showProgress(){
+    public void showProgress() {
         showProgress(getString(R.string.loading));
     }
 
-    public void showProgress(String message){
+    public void showProgress(String message) {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(this);
             progressDialog.setCancelable(false);
@@ -97,7 +133,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     /**
      * 关闭当前正在显示的progressDialog
      */
-    public void cancelProgress(){
+    public void cancelProgress() {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.cancel();
         }
@@ -106,7 +142,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     /**
      * 设置透明任务栏
      */
-    private void setSystemBarTransparent(){
+    private void setSystemBarTransparent() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // LOLLIPOP解决方案
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
@@ -129,5 +165,13 @@ public abstract class BaseActivity extends AppCompatActivity{
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         PermissionReq.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (serviceConnection != null) {
+            unbindService(serviceConnection);
+        }
+        super.onDestroy();
     }
 }

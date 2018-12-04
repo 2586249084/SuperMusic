@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils.id3;
+package com.utils.id3;
 
 import android.util.Log;
 

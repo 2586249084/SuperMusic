@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils.binding;
+package com.utils.binding;
 
 import android.support.annotation.IdRes;
 import java.lang.annotation.ElementType;

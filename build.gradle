@@ -7,6 +7,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
     }
 }
 
@@ -21,6 +22,7 @@ allprojects {
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion 27
@@ -28,11 +30,22 @@ android {
     // 秘钥相关设置
     signingConfigs {
         release {
-
+            storeFile file("keystore/superMusic")
+            storePassword "19960716"
+            keyAlias "supermusic"
+            keyPassword "19960716"
         }
         debug {
-
+            storeFile file("keystore/superMusic")
+            storePassword "19960716"
+            keyAlias "supermusic"
+            keyPassword "19960716"
         }
+    }
+    // greendao配置
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 1
     }
     defaultConfig {
         minSdkVersion 15
@@ -93,8 +106,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.blinkenlights.jid3:JID3:0.46'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.hwangjr.rxbus:rxbus:2.0.0'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
 }
-

@@ -1,4 +1,4 @@
-package me.mrzhang.music.utils;
+package com.utils;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

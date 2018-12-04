@@ -1,12 +1,12 @@
-package me.mrzhang.music.executor;
+package com.executor;
 
 import android.content.Intent;
 import android.view.MenuItem;
 import me.mrzhang.music.R;
-import me.mrzhang.music.activity.AboutActivity;
-import me.mrzhang.music.activity.MusicActivity;
-import me.mrzhang.music.activity.SettingActivity;
-import me.mrzhang.music.utils.ToastUtils;
+import com.activity.AboutActivity;
+import com.activity.MusicActivity;
+import com.activity.SettingActivity;
+import com.utils.ToastUtils;
 
 /**
  * 导航菜单执行器
