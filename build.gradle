@@ -52,7 +52,7 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-        applicationId "me.mrzhang.music"
+        applicationId "com.mrzhang.supermusic"
     }
     sourceSets {
         main {
@@ -69,7 +69,7 @@ android {
         // 将测试移动到tests/java,tests/res,等…
         androidTest.setRoot('tests')
         debug.setRoot('build-types/debug')
-        release.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
     }
     buildTypes {
         release {
@@ -84,11 +84,11 @@ android {
         }
     }
     lintOptions{
-        checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
         // but continue the build even when errors are found:
         // 或者，如果您愿意，您可以继续检查版本构建中的错误，
         // 但是即使发现错误，也可以继续构建:
+        checkReleaseBuilds false
         abortOnError false
     }
     compileOptions {
