@@ -15,6 +15,10 @@
         <item name="playBarBackground">@drawable/play_bar_bg_selector_dark</item>
     </style>
 
+    <!--
+    该背景颜色会导致报错。。
+    android.view.InflateException: Binary XML file line #2: Error inflating class <unknown>
+    -->
     <attr name="playBarBackground" format="reference" />
 
     <style name="AppTheme" parent="AppBaseTheme" />

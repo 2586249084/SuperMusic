@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     android:fitsSystemWindows="true"
     android:orientation="horizontal">
@@ -10,45 +12,39 @@
         android:id="@+id/image_menu"
         android:layout_width="?attr/actionBarSize"
         android:layout_height="?attr/actionBarSize"
-        android:scaleType="centerInside"
         android:contentDescription="@null"
-        android:src="@drawable/ic_menu"/>
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_menu" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/text_local_music"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:text="@string/local_music"
+        android:textColor="@drawable/music_tab_bar_text_color_selector"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"/>
 
-        <TextView
-            android:id="@+id/text_local_music"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/local_music"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:textColor="@drawable/music_tab_bar_text_color_selector"/>
-
-        <TextView
-            android:id="@+id/text_online_music"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/online_music"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:textColor="@drawable/music_tab_bar_text_color_selector"/>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/text_online_music"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/online_music"
+        android:textColor="@drawable/music_tab_bar_text_color_selector"
+        android:textSize="15sp" />
 
     <ImageView
         android:id="@+id/image_search"
         android:layout_width="?attr/actionBarSize"
         android:layout_height="?attr/actionBarSize"
-        android:contentDescription="@null"
         android:layout_gravity="end"
+        android:contentDescription="@null"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_search"/>
+        android:src="@drawable/ic_search" />
 
-</FrameLayout>
+</android.support.v7.widget.Toolbar>

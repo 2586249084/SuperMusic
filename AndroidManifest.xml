@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
-        android:name=".application.MusicApplication"
+        android:name="com.application.MusicApplication"
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -21,11 +21,11 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup">
 
-        <service android:name=".service.PlayService" />
+        <service android:name="com.service.PlayService" />
 
         <activity
-            android:name=".activity.MusicActivity"
-            android:label="@string/app_name"
+            android:name="com.activity.MusicActivity"
+            android:label=""
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,13 +34,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.SettingActivity"
+        <activity android:name="com.activity.SettingActivity"
+            android:label="@string/menu_setting"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.SearchMusicActivity"
+        <activity android:name="com.activity.SearchMusicActivity"
+            android:label="@string/search"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.AboutActivity"
+        <activity android:name="com.activity.AboutActivity"
+            android:label="@string/menu_about"
             android:screenOrientation="portrait"/>
 
     </application>

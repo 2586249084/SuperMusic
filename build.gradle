@@ -42,7 +42,7 @@ android {
             keyPassword "19960716"
         }
     }
-    // greendao配置
+    // greenDao配置
     greendao {
         //版本号，升级时可配置
         schemaVersion 1
@@ -83,14 +83,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions{
-        // Or, if you prefer, you can continue to check for errors in release builds,
-        // but continue the build even when errors are found:
-        // 或者，如果您愿意，您可以继续检查版本构建中的错误，
-        // 但是即使发现错误，也可以继续构建:
+    // 以下方法是为了避免报出警报，可根据AS版本自行设置
+    /*lintOptions{
         checkReleaseBuilds false
         abortOnError false
-    }
+    }*/
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
