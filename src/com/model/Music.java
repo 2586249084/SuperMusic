@@ -21,7 +21,7 @@ public class Music implements Serializable {
 
     @Id(autoincrement = true)
     @Property(nameInDb = "id")
-    private long id;
+    private Long id;
 
     @NotNull
     @Property(nameInDb = "type")
@@ -63,8 +63,8 @@ public class Music implements Serializable {
     public Music() {
     }
 
-    @Generated(hash = 1257893585)
-    public Music(long id, int type, long songId, String title, String artist,
+    @Generated(hash = 332465567)
+    public Music(Long id, int type, long songId, String title, String artist,
             String album, long albumId, String coverPath, long duration,
             @NotNull String path, String fileName, long fileSize) {
         this.id = id;
@@ -104,7 +104,7 @@ public class Music implements Serializable {
         return false;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -200,4 +200,25 @@ public class Music implements Serializable {
         this.fileSize = fileSize;
     }
 
+    @Override
+    public String toString() {
+        return "Music{" +
+                "id=" + id +
+                ", type=" + type +
+                ", songId=" + songId +
+                ", title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", album='" + album + '\'' +
+                ", albumId=" + albumId +
+                ", coverPath='" + coverPath + '\'' +
+                ", duration=" + duration +
+                ", path='" + path + '\'' +
+                ", fileName='" + fileName + '\'' +
+                ", fileSize=" + fileSize +
+                '}';
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

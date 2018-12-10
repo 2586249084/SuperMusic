@@ -5,15 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fragment.PlayMusicFragment;
 import com.mrzhang.supermusic.R;
 
 import com.adapter.FragmentAdapter;
@@ -41,9 +43,13 @@ public class MusicActivity extends BaseActivity implements
     private TextView text_local_music;
     @Bind(R.id.text_online_music)
     private TextView text_online_music;
+    @Bind(R.id.frame_play_bar)
+    private FrameLayout frame_play_bar;
 
     private LocalMusicFragment mLocalMusicFragment;
     private OnlineMusicFragment mOnlineMusicFragment;
+    private PlayMusicFragment mPlayMusicFragment;
+    private boolean isPlayFragmentShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +89,9 @@ public class MusicActivity extends BaseActivity implements
             case R.id.text_online_music:
                 viewPager.setCurrentItem(1);
                 break;
+            case R.id.frame_play_bar:
+                showPlayFragment();
+                break;
         }
     }
 
@@ -117,6 +126,7 @@ public class MusicActivity extends BaseActivity implements
 
         image_search.setOnClickListener(this);
         image_menu.setOnClickListener(this);
+        frame_play_bar.setOnClickListener(this);
         text_local_music.setOnClickListener(this);
         text_online_music.setOnClickListener(this);
         navigationView.setNavigationItemSelectedListener(this);
@@ -134,21 +144,65 @@ public class MusicActivity extends BaseActivity implements
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         viewPager.post(() -> {
-           viewPager.setCurrentItem(savedInstanceState.getInt(Keys.VIEW_PAGER_INDEX), false);
-           mLocalMusicFragment.onSaveInstanceState(savedInstanceState);
-           mOnlineMusicFragment.onSaveInstanceState(savedInstanceState);
+            viewPager.setCurrentItem(savedInstanceState.getInt(Keys.VIEW_PAGER_INDEX), false);
+            mLocalMusicFragment.onSaveInstanceState(savedInstanceState);
+            mOnlineMusicFragment.onSaveInstanceState(savedInstanceState);
         });
     }
 
     @Override
+    public void onBackPressed() {
+        if (mPlayMusicFragment != null && isPlayFragmentShow) {
+            hidePlayFragment();
+            return;
+        }
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawers();
+            return;
+        }
+        moveTaskToBack(true);
+    }
+
+    /*@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
+                if (mPlayMusicFragment != null && isPlayFragmentShow) {
+                    hidePlayFragment();
+                    return false;
+                }
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawers();
+                    return false;
                 }
-                return false;
+                moveTaskToBack(true);
+                return true;
         }
         return super.onKeyDown(keyCode, event);
+    }*/
+
+    private void showPlayFragment() {
+        if (isPlayFragmentShow) {
+            return;
+        }
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.setCustomAnimations(R.anim.fragment_slide_up, 0);
+        if (mPlayMusicFragment == null) {
+            mPlayMusicFragment = new PlayMusicFragment();
+            ft.replace(android.R.id.content, mPlayMusicFragment);
+        } else {
+            ft.show(mPlayMusicFragment);
+        }
+        ft.commitAllowingStateLoss();
+        isPlayFragmentShow = true;
     }
+
+    private void hidePlayFragment() {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.setCustomAnimations(0, R.anim.fragment_slide_down);
+        ft.hide(mPlayMusicFragment);
+        ft.commitAllowingStateLoss();
+        isPlayFragmentShow = false;
+    }
+
 }

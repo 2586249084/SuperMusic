@@ -46,6 +46,8 @@ android {
     greendao {
         //版本号，升级时可配置
         schemaVersion 1
+        daoPackage "com.storage.greendao"
+        targetGenDir 'src'
     }
     defaultConfig {
         minSdkVersion 15

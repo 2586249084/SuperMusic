@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.model.Music;
+import com.service.AudioPlayer;
 import com.utils.CoverLoader;
 import com.utils.FileUtils;
 import com.utils.binding.Bind;
@@ -69,7 +70,7 @@ public class PlayListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.view_playing.setVisibility(View.VISIBLE);
+        holder.view_playing.setVisibility(position == AudioPlayer.get().getPlayPosition() ? View.VISIBLE : View.INVISIBLE);
         Music music = musicList.get(position);
         Bitmap cover = CoverLoader.get().loadThumb(music);
         holder.image_cover.setImageBitmap(cover);

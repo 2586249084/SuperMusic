@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Intent;
 
 import com.service.PlayService;
+import com.storage.database.DataBaseManager;
 
 /**
  * 自定义Application
@@ -18,6 +19,7 @@ public class MusicApplication extends Application {
     public void onCreate() {
         super.onCreate();
         AppCache.get().init(this);
+        DataBaseManager.get().init(this);
 
         Intent intent = new Intent(this, PlayService.class);
         startService(intent);

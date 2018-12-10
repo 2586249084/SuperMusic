@@ -27,7 +27,8 @@ public class PlayService extends Service {
     public void onCreate() {
         super.onCreate();
         Log.i(TAG, "onCreate : " + getClass().getSimpleName());
-
+        AudioPlayer.get().init(this);
+        MediaSessionManager.get().init(this);
     }
 
     @Nullable

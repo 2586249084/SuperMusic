@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:id="@+id/frame_play_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/play_bar_height"
     android:background="?android:attr/windowBackground">
@@ -45,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:singleLine="true"
+                android:text="@string/artist_and_album"
                 android:textColor="@color/grey"
                 android:textSize="12sp"/>
 

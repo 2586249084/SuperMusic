@@ -38,7 +38,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     protected PlayService playService;
     private ServiceConnection serviceConnection;
-    private int layoutId = 0;
     private static final String TAG = "Error from BaseActivity";
 
     private class PlayServiceConnection implements ServiceConnection {
@@ -82,7 +81,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public void setContentView(int layoutResID) {
-        layoutId = layoutResID;
         super.setContentView(layoutResID);
         initView();
     }
@@ -100,10 +98,8 @@ public abstract class BaseActivity extends AppCompatActivity {
             throw new IllegalStateException("Layout is required to include a Toolbar with id 'toolbar'");
         } else {
             setSupportActionBar(mToolbar);
-            if (layoutId != 0 && layoutId != R.layout.activity_music && getSupportActionBar() != null) {
+            if (getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            } else {
-                Log.e(TAG, "some error in here, please check! " + layoutId);
             }
         }
     }

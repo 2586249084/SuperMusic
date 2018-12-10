@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import com.constants.RxBusTags;
 import com.hwangjr.rxbus.annotation.Subscribe;
 import com.hwangjr.rxbus.annotation.Tag;
 import com.model.Music;
+import com.service.AudioPlayer;
 import com.utils.MusicUtils;
 import com.utils.PermissionReq;
 import com.utils.ToastUtils;
@@ -42,6 +44,7 @@ public class LocalMusicFragment extends BaseFragment implements OnMoreClickListe
     private TextView text_is_scanning;
 
     private PlayListAdapter adapter;
+    private static final String TAG = "LocalMusicFragment";
 
     @Nullable
     @Override
@@ -111,6 +114,8 @@ public class LocalMusicFragment extends BaseFragment implements OnMoreClickListe
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         Music music = AppCache.get().getLocalMusicList().get(position);
-        ToastUtils.show(music.getFileName());
+        AudioPlayer.get().addAndPlay(music);
+        ToastUtils.show("已添加至播放列表");
+        Log.i(TAG, music.toString());
     }
 }
